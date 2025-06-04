@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gestión de Categoría - SPORTFLEXX</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+
+  <header>
+    <h1>Gestión de Categoría - SPORTFLEXX</h1>
+  </header>
+
+  <main>
+    <section class="formulario">
+      <h2>Registrar Nueva Categoría</h2>
+      <form>
+        <input type="hidden" name="IdCategoria" value="0">
+        <div class="campo">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="Nombre" required pattern="[A-Za-z\s]+">
+        </div>
+        <div class="campo">
+          <label for="descripcion">Descripción:</label>
+          <input type="text" id="descripcion" name="Descripcion" required>
+        </div>
+        <button type="submit">Guardar Categoría</button>
+      </form>
+    </section>
+
+    <section class="tabla">
+      <h2>Categorías Registradas</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID Categoría</th>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Ropa</td>
+            <td>Indumentaria deportiva</td>
+            <td>
+              <button class="editar">Editar</button>
+              <button class="eliminar">Eliminar</button>
+            </td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Accesorios</td>
+            <td>Gorros, mochilas, botellas</td>
+            <td>
+              <button class="editar">Editar</button>
+              <button class="eliminar">Eliminar</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 SPORTFLEXX. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
