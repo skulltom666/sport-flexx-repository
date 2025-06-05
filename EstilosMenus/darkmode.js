@@ -1,3 +1,4 @@
+//Código para activar modo oscuro, cambiar iconos y guardar la preferencia para mejorar la experiencia del usuario.
 document.getElementById("darkModeToggle").addEventListener("click", function () {
     document.body.classList.toggle("dark-mode");
     const icon = document.getElementById("darkModeIcon");
