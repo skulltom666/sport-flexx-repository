@@ -1,18 +1,5 @@
-//Código para activar modo oscuro, cambiar iconos y guardar la preferencia para mejorar la experiencia del usuario.
-document.getElementById("darkModeToggle").addEventListener("click", function () {
-    document.body.classList.toggle("dark-mode");
-    const icon = document.getElementById("darkModeIcon");
-    if (document.body.classList.contains("dark-mode")) {
-        icon.classList.remove("fa-moon");
-        icon.classList.add("fa-sun");
-        localStorage.setItem('theme', 'dark'); 
-    } else {
-        icon.classList.remove("fa-sun");
-        icon.classList.add("fa-moon");
-        localStorage.setItem('theme', 'light');
-    }
-});
 
+<<<<<<< HEAD:EstilosMenus/darkmode.js
 window.onload = function () {
     const theme = localStorage.getItem('theme');
     if (theme === 'dark') {
@@ -21,3 +8,5 @@ window.onload = function () {
         document.getElementById("darkModeIcon").classList.add("fa-sun");
     }
 };
+=======
+>>>>>>> cedb304 (Update darkmode.js):Cliente/EstilosMenus/darkmode.js
