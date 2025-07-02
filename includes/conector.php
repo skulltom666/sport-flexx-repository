@@ -11,11 +11,11 @@ class Conectar {
         if ($this->conexion->connect_error) {
             die("Error de conexión: " . $this->conexion->connect_error);
         }
-        // Establecer el conjunto de caracteres a utf8mb4
+        
         $this->conexion->set_charset("utf8mb4");
-        // Prueba de conexión
+        
         if ($this->conexion->ping()) {
-            //echo "Conexión establecida correctamente!";
+            
         } else {
             echo "Error de conexión: " . $this->conexion->error;
         }
