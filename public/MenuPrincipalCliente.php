@@ -11,7 +11,7 @@ function mostrarProductos($categoriaId, $conexion) {
     $stmt->execute();
     $result = $stmt->get_result();
 
-    $rutaBaseImagen = "../ImagenProductos/";
+    $rutaBaseImagen = "../assets/images/ImagenProductos/";
 
     while ($row = $result->fetch_assoc()) {
         $imagenRuta = $rutaBaseImagen . $row['ImagenProducto'];
