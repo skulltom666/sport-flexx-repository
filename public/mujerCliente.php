@@ -10,13 +10,13 @@ function mostrarProductosMujer($conexion) {
     $stmt->execute();
     $result = $stmt->get_result();
 
-    $rutaBaseImagen = "../ImagenProductos/";
+    $rutaBaseImagen = "../assets/images/ImagenProductos/";
 
     while ($row = $result->fetch_assoc()) {
         $imagenRuta = $rutaBaseImagen . $row['ImagenProducto'];
 
         if (!file_exists($imagenRuta)) {
-            $imagenRuta = "../ImagenProductos/default.png";
+            $imagenRuta = "../assets/images/ImagenProductos/default.png";
         }
 
         $nombreProducto = (strlen($row['Nombre']) > 25) ? substr($row['Nombre'], 0, 25) . '...' : $row['Nombre'];
@@ -46,7 +46,7 @@ function mostrarProductosMujer($conexion) {
     <title>MUJERES</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../EstilosMenus/EstilosMenu.css" />
+    <link rel="stylesheet" href="../assets/css/EstilosMenu.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" />

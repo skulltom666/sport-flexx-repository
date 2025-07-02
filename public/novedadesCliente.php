@@ -10,13 +10,13 @@ function mostrarProductoNovedades($conexion) {
     $stmt->execute();
     $result = $stmt->get_result();
 
-    $rutaBaseImagen = "../ImagenProductos/";
+    $rutaBaseImagen = "../assets/images/ImagenProductos/";
 
     while ($row = $result->fetch_assoc()) {
         $imagenRuta = $rutaBaseImagen . $row['ImagenProducto'];
 
         if (!file_exists($imagenRuta)) {
-            $imagenRuta = "../ImagenProductos/default.png";
+            $imagenRuta = "../assets/images/ImagenProductos/default.png";
         }
 
         $nombreProducto = (strlen($row['Nombre']) > 40) ? substr($row['Nombre'], 0, 40) . '...' : $row['Nombre'];
@@ -46,7 +46,7 @@ function mostrarProductoNovedades($conexion) {
   <title>NOVEDADES</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="../EstilosMenus/EstilosMenu.css" />
+ <link rel="stylesheet" href="../assets/css/EstilosMenu.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" />
@@ -200,14 +200,14 @@ function mostrarProductoNovedades($conexion) {
       <div class="carousel-inner">
         <div class="carousel-item active">
           <video class="video-fluid w-100" autoplay loop muted>
-            <source src="../ImagenMenu/fernandoalonso.mp4" type="video/mp4">
+            <source src="../assets/images/fernandoalonso.mp4" type="video/mp4">
           </video>
           <div class="carousel-caption">
             <h2 class="text-warning">SPORTFLEXX X FERNANDO ALONSO</h2>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="../ImagenMenu/AlonsoAston.png" class="d-block w-100" alt="Fernando Alonso"
+          <img src="../assets/images/ImagenProductos/AlonsoAston.png" class="d-block w-100" alt="Fernando Alonso"
             style="max-height: 720px">
           <div class="carousel-caption">
             <h2 class="text-warning">SPORTFLEXX X FERNANDO ALONSO</h2>

@@ -9,29 +9,21 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <style>
-    /* Estilo del contenedor de productos en el carrusel */
     .product-container {
         display: flex;
         flex-wrap: nowrap;
-        /* Asegura que los productos se mantengan en una sola fila */
         overflow-x: auto;
-        /* Permite el desplazamiento horizontal en dispositivos pequeños */
         gap: 15px;
-        /* Espacio entre productos */
         padding: 10px;
     }
 
-    /* Oculta la barra de desplazamiento en navegadores que soporten WebKit */
     .product-container::-webkit-scrollbar {
         display: none;
     }
 
-    /* Estilo de cada tarjeta de producto */
     .product-card {
         flex: 0 0 auto;
-        /* Evita que las tarjetas cambien de tamaño */
         width: 200px;
-        /* Ajusta el tamaño de las tarjetas */
         text-align: center;
         background-color: #f8f9fa;
         border: 1px solid #ddd;
@@ -40,7 +32,6 @@
         transition: transform 0.3s;
     }
 
-    /* Efecto al pasar el cursor sobre la tarjeta */
     .product-card:hover {
         transform: scale(1.05);
     }
@@ -86,11 +77,9 @@
                             <h5 class="product-title">Producto 3</h5>
                             <p class="product-price">S/. 300.00</p>
                         </div>
-                        <!-- Añade más productos según sea necesario -->
                     </div>
                 </div>
             </div>
-            <!-- Controles de navegación del carrusel -->
             <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Anterior</span>

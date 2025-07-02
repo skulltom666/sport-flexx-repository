@@ -47,7 +47,7 @@ function mostrarProductos($categoriaId, $conexion) {
   <title>SPORTFLEXX</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../EstilosMenus/EstilosMenu.css" />
+    <link rel="stylesheet" href="../assets/css/EstilosMenu.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" />
@@ -85,14 +85,14 @@ function mostrarProductos($categoriaId, $conexion) {
       <div class="carousel-inner">
         <div class="carousel-item active">
           <video class="video-fluid w-100" autoplay loop muted>
-            <source src="../ImagenMenu/SPORTFLEXX.mp4" type="video/mp4">
+            <source src="../assets/images/SPORTFLEXX.mp4" type="video/mp4">
           </video>
           <div class="carousel-caption d-none d-md-block">
             <h2 class="text-warning fw-bold">Bienvenido a Sportflexx</h2>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="../ImagenMenu/SPORTFLEXX.png" class="d-block w-100" alt="Nature with sea">
+          <img src="../assets/images/SPORTFLEXX.png" class="d-block w-100" alt="Nature with sea">
           <div class="carousel-caption d-none d-md-block">
             <h2 class="text-warning fw-bold">Bienvenido a Sportflexx</h2>
           </div>
