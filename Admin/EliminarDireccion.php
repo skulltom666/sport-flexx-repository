@@ -1,5 +1,3 @@
-//Eliminar direcciones
-
 <?php
 require_once(__DIR__ . "/../coneccion/conector.php");
 
@@ -21,4 +19,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
-
