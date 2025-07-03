@@ -1,5 +1,3 @@
-//Crear y listar pedidos
-
 <?php
 require_once(__DIR__ . "/../coneccion/conector.php");
 
@@ -490,4 +488,3 @@ include_once "footer_Admin.php";
 
 </body>
 </html>
-
