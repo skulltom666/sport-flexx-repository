@@ -1,13 +1,34 @@
+<?php
+session_start();
+require_once(__DIR__ . "/../../Admin/PHP/coneccion/conector.php");
+
+// Cargar archivo de registro de usuario solo si se envía btnRegistrar
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btnRegistrar'])) {
+    require_once(__DIR__ . "/../../Admin/PHP/Menus/registrarUsuario.php");
+}
+
+// Configuración de errores para desarrollo
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+// Captura de mensajes de error o éxito desde sesión
+$mensaje = '';
+if (isset($_SESSION['mensaje'])) {
+    $mensaje = $_SESSION['mensaje'];
+    unset($_SESSION['mensaje']);
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - SPORTFLEXX</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="../assets/css/login.css">
+    <link rel="stylesheet" href="styleLogin2.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Login - SPORTFLEXX</title>
 </head>
 
 <body>
@@ -45,8 +66,11 @@
                     <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
                 </div>
                 <span>O</span>
+                <?php if ($mensaje): ?>
                 <div class="alert alert-danger" role="alert">
+                    <?= htmlspecialchars($mensaje) ?>
                 </div>
+                <?php endif; ?>
                 <input type="text" placeholder="Usuario" name="NombreUsuario" required autofocus>
                 <input type="password" placeholder="Contraseña" name="Contrasena" required>
                 <a href="#">¿Olvidaste tu contraseña?</a>
@@ -73,6 +97,7 @@
     
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../assets/js/login.js"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
