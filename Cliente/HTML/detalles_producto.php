@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$conexion = new mysqli('localhost', 'root', '', 'sportflexx');
+$conexion = new mysqli('localhost', 'root', 'admin', 'sportflexx');
 
 if ($conexion->connect_error) {
     die("Conexión fallida: " . $conexion->connect_error);
