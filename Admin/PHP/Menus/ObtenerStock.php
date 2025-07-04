@@ -5,7 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $idProducto = $_POST['IdProducto'];
     $talla = $_POST['Talla'];
 
-    $conexion = new mysqli('localhost', 'root', '', 'sportflexx');
+    $conexion = new mysqli('localhost', 'root', 'admin', 'sportflexx');
 
     if ($conexion->connect_error) {
         die("Conexión fallida: " . $conexion->connect_error);

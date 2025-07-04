@@ -63,7 +63,7 @@
     </div>
     <main>
         <h2>Ingresa a nuestro portal</h2>
-        <a href="/SPORTFLEXX/Cliente/HTML/MenuPrincipalCliente.php">Click aquí</a>
+        <a href="/SPORT-FLEXX-REPOSITORY/Cliente/HTML/MenuPrincipalCliente.php">Click aquí</a>
     </main>
 </body>
 </html>
