@@ -14,7 +14,7 @@ class Conectar {
         // Establecer el conjunto de caracteres a utf8mb4
         $this->conexion->set_charset("utf8mb4");
         // Prueba de conexión
-        if ($this->conexion->ping()) {
+        if ($this->conexion) {
             //echo "Conexión establecida correctamente!";
         } else {
             echo "Error de conexión: " . $this->conexion->error;
