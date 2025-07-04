@@ -1,5 +1,5 @@
 <?php
-require_once(__DIR__ . "/../../Admin/PHP/coneccion/conector.php");
+require_once(__DIR__ . "../../../Admin/conector.php");
 session_start();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

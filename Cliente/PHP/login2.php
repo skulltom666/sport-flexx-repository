@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once(__DIR__ . "/../../Admin/PHP/coneccion/conector.php");
+require_once(__DIR__ . "../../../Admin/conector.php");
 
 // Cargar archivo de registro de usuario solo si se envía btnRegistrar
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['btnRegistrar'])) {

@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once(__DIR__ . "/../../Admin/PHP/coneccion/conector.php");
+require_once(__DIR__ . "../../../Admin/conector.php");
 $obj = new Conectar();
 $conexion = $obj->getConexion();
 
