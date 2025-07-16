@@ -9,7 +9,7 @@
             background-color: #687899ff;
             color: #333;
             font-family: Arial, sans-serif;
-            margin: 10;
+            margin: 0;
             padding: 0;
         }
         .contenedor {
