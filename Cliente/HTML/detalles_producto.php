@@ -276,6 +276,17 @@ if (isset($_GET['id'])) {
                     </p>
                 <?php endif; ?>
 
+                <!-- Botón Agregar al Carrito -->
+                    <form method="POST" action="carrito.php">
+                        <input type="hidden" name="titulo" value="<?php echo htmlspecialchars($producto['Nombre']); ?>">
+                        <input type="hidden" name="descripcion" value="<?php echo htmlspecialchars($producto['Descripcion']); ?>">
+                        <input type="hidden" name="precio" value="<?php echo $producto['PrecioUnitario']; ?>">
+                        <input type="hidden" name="imagen" value="http://localhost/SPORTFLEXX/Cliente/ImagenProductos/<?php echo $producto['ImagenProducto']; ?>">
+                        <button type="submit" class="btn btn-success mt-3">
+                            <i class="bi bi-cart-plus"></i> Agregar al carrito
+                        </button>
+                    </form>
+
                 <div class="guarantee">
                     <i class="fas fa-check-circle"></i> 10 días de garantía.
                 </div>

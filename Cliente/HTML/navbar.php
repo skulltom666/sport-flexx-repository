@@ -1,3 +1,17 @@
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+// Contador de productos
+$total_items = 0;
+if (isset($_SESSION['carrito'])) {
+    foreach ($_SESSION['carrito'] as $item) {
+        $total_items += $item['cantidad'];
+    }
+}
+?>
+
 <style>
     .navbar-brand img {
         width: 150px;
@@ -55,6 +69,15 @@
                     </li>
                     <li class="nav-item p-3 py-md-1 fas fa-gem">
                         <a href="novedadesCliente.php" class="nav-link">NOVEDADES</a>
+                    </li>
+                    <li class="nav-item"> 
+                        <a href="carrito.php" class="nav-link position-relative">
+                            <i class="fas fa-shopping-cart fa-lg"></i>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                <?= $total_items ?>
+                                <span class="visually-hidden">productos en carrito</span>
+                            </span>
+                        </a>
                     </li>
 
                     <li class="nav-item dropdown p-3 py-md-1">
