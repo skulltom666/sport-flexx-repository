@@ -6,10 +6,10 @@
     <title>Bienvenido</title>
     <style>
         body {
-            background-color: #f3f4f6;
+            background-color: #687899ff;
             color: #333;
             font-family: Arial, sans-serif;
-            margin: 0;
+            margin: 10;
             padding: 0;
         }
         .contenedor {
