@@ -3,15 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
     <title>Document</title>
-    <p>test jenkins</p>
+    <p>test jenkins 2</p>
 </head>
 <body>
     
 </body>
 </html>
-=======
     <title>Bienvenido</title>
     <style>
         body {
@@ -76,4 +74,3 @@
     </main>
 </body>
 </html>
->>>>>>> 32e3d80d3556459344c244bf111247af7d11e2bb
