@@ -67,10 +67,10 @@
     <div class="contenedor">
         <h1>Bienvenido</h1>
         <img src="Cliente/ImagenMenu/logo.png" alt="">
-    </div>
+    </div>  
     <main>
         <h2>Ingresa a nuestro portal</h2>
-        <a href="/SPORTFLEXX/Cliente/HTML/MenuPrincipalCliente.php">Click aquí</a>
+        <a href="/sport-flexx-repository/Cliente/HTML/MenuPrincipalCliente.php">Click aquí</a>
     </main>
 </body>
 </html>

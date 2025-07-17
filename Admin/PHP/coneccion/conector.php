@@ -2,7 +2,7 @@
 class Conectar {
     private $server = "localhost";
     private $login = "root";
-    private $pass = "";
+    private $pass = "admin";
     private $bdatos = "sportflexx";
     private $conexion;
 
