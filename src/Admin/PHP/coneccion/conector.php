@@ -1,6 +1,10 @@
 <?php
+
+// $conexion = new mysqli("localhost", "root", "", "sportflexx");
+$conexion = new mysqli("db", "root", "", "sportflexx");
+
 class Conectar {
-    private $server = "localhost";
+    private $server = "db";
     private $login = "root";
     private $pass = "";
     private $bdatos = "sportflexx";
