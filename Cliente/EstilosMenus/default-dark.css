@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+/*Estilos a la barra superior, sidebar oscuro y mantiene tema azul uniforme.*/
+=======
 /*
 Template Name: Admin Pro Admin
 Author: Wrappixel 
@@ -18,6 +21,7 @@ File: scss
 /*******************
 /*Top bar
 *******************/
+>>>>>>> 32e3d80d3556459344c244bf111247af7d11e2bb
 .topbar {
   background: #fff; }
   .topbar .top-navbar .navbar-header .navbar-brand .light-logo {
