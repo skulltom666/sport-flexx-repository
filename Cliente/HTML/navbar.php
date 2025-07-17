@@ -66,27 +66,41 @@
                         <a href="novedadesCliente.php" class="nav-link">NOVEDADES</a>
                     </li>
                     <!-- Iconos de búsqueda y perfil alineados -->
-                    <div class="d-flex align-items-center justify-content-end gap-2 mt-2">
-                        <button id="searchIconBtn" class="btn btn-link p-0" type="button" style="font-size:1.4rem; color:#17a2b8; margin-right: 0.5rem;">
-                            <i class="fas fa-search"></i>
-                        </button>
-                        <div class="nav-item dropdown p-0">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="fas fa-user fa-fw"></i>
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="MiPerfil.php"><i class="fas fa-cog"></i> Perfil</a>
-                                <a class="dropdown-item" href="Logout.php"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
-                            </ul>
-                        </div>
-                        <!-- Buscador flotante -->
-                        <div id="floatingSearch" class="position-absolute top-100 end-0 bg-white p-3 shadow rounded d-none" style="z-index:1050; min-width:300px;">
-                            <form class="d-flex" role="search" method="get" action="busqueda.php">
-                                <input class="form-control me-2" type="search" placeholder="Buscar productos..." aria-label="Buscar" name="q" autofocus required>
-                                <button class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
-                            </form>
-                        </div>
-                    </div>
+                    <?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+$carrito_count = isset($_SESSION['carrito']) ? count($_SESSION['carrito']) : 0;
+?>
+<div class="d-flex align-items-center justify-content-end gap-2 mt-2">
+    <a href="carrito.php" class="btn btn-link position-relative p-0" style="font-size:1.6rem; color:#0d6efd;">
+        <i class="fas fa-shopping-cart"></i>
+        <?php if ($carrito_count > 0): ?>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size:0.8rem;">
+                <?= $carrito_count ?>
+            </span>
+        <?php endif; ?>
+    </a>
+    <button id="searchIconBtn" class="btn btn-link p-0" type="button" style="font-size:1.4rem; color:#17a2b8; margin-right: 0.5rem;">
+        <i class="fas fa-search"></i>
+    </button>
+    <div class="nav-item dropdown p-0">
+        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <i class="fas fa-user fa-fw"></i>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="MiPerfil.php"><i class="fas fa-cog"></i> Perfil</a>
+            <a class="dropdown-item" href="Logout.php"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</a>
+        </ul>
+    </div>
+    <!-- Buscador flotante -->
+    <div id="floatingSearch" class="position-absolute top-100 end-0 bg-white p-3 shadow rounded d-none" style="z-index:1050; min-width:300px;">
+        <form class="d-flex" role="search" method="get" action="busqueda.php">
+            <input class="form-control me-2" type="search" placeholder="Buscar productos..." aria-label="Buscar" name="q" autofocus required>
+            <button class="btn btn-primary" type="submit"><i class="fas fa-search"></i></button>
+        </form>
+    </div>
+</div>
                 </ul>
             </div>
         </section>

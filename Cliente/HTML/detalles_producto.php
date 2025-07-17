@@ -278,6 +278,7 @@ if (isset($_GET['id'])) {
 
                 <!-- Botón Agregar al Carrito -->
                     <form method="POST" action="carrito.php">
+                        <input type="hidden" name="accion" value="agregar_producto">
                         <input type="hidden" name="titulo" value="<?php echo htmlspecialchars($producto['Nombre']); ?>">
                         <input type="hidden" name="descripcion" value="<?php echo htmlspecialchars($producto['Descripcion']); ?>">
                         <input type="hidden" name="precio" value="<?php echo $producto['PrecioUnitario']; ?>">
